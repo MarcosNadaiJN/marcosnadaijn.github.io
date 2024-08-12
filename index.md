@@ -1,5 +1,4 @@
-Here you can say lots of fun things about your site.
+# Straight to the point
+I like to learn things, we all do, but i was lacking motivation to actually sit down and start studing, so i remembered the one thing i like to do, more than i like learn things, it is to explain it to someone (i like to talk, okay), so i had an idea that motivated me to study again, an idea that no one had before, i decided to start a Youtube Channel. I know okay, i know...
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+With that in mind, i thought about a bunch of videos that i wanted to make, about data structures, how git works, Java Threads, Generics, Design Patterns etc etc..., but the problem is, making those videos take A LOT of time, and i don't have that time (yet), but i still want to learn those things, yeah that's the idea, trick my brain to learn, so i can talk about it (i REALLY like to talk okay...) so i decided to write about it, to still learn even tough i don't have time to make the videos right now.
