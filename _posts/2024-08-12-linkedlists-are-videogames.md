@@ -41,6 +41,7 @@ List Node
 ## But what is this Node thing ??
 Nodes are super simple, they are basically this:
 
+```java
     public static class Node<T> {
     
         T data; 			//(The stored data)
@@ -51,15 +52,18 @@ Nodes are super simple, they are basically this:
 	            this.next = null;
 	        }
     }
+```
 
 // insert image later;
 
 And the LinkedList is also simple, they look like this:
 
+```java
     public class MyLinkedList<T> {
 	    private Node<T> head; 		//(First node)
 	    private int length = 0; 	//(How many nodes)
     }
+```
 // insert image later;
 
 ## Wait, that's it ??
@@ -76,14 +80,14 @@ When we insert a new node to our list, we can insert it, at the end, at the the 
  4. Increase the Length of our List by one;
 
 Now let's do this:
-
+```java
     public void insertAtBegin(T data) {
         Node<T> newNode = new Node<>(data);		//1. Create a Node, and store the data that we want;
         newNode.next = head; 					//2. Set where is our next node;
         head = newNode; 						//3. Set the list "head" field, to be our new first node;
         length++; 								//4. Increase the Length of our List by one;
     }
-
+```
 //insert image
 
 If we think about this in game terms, it's like wee just created our first mission.
@@ -98,7 +102,7 @@ And we can do this, how many times we want, with as many nodes we need
 Now let's say we want to add a new mission to our game, but this time, it's a mission at the end of the game, so what we need to do, is to point the last mission, to our new mission. But remember, the player needs to go through the hole game, he can't skip any mission, now let's talk in boring therms, we need to start at the head of the list, iterate through the list, until we find a node, that it's head is pointing to null, which means that we are at the last node, so now we point it's head to our new node, and increase the length of our list :)
 
 Just like this:
-
+```java
     public void insertAtEnd(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) { 					// If the head of the list is null, then this node, is the first one being inserted;
@@ -112,7 +116,7 @@ Just like this:
         }
         length++;
     }
-
+```
 super cool right ? but what if our first mission is super boring, and we need to replace it ? it's going to be completely diferente, but at the and of it, i will point to the same starting point of the second mission, that we already had. We need to break the problem in two steps, first we need to remove the old one from the begin of the list, then insert the new one, we already know how to insertAtBegin, now let's se how to:
 
  removeFromBegin:
@@ -123,7 +127,7 @@ super cool right ? but what if our first mission is super boring, and we need to
  5. Decrease the length of the list by one;
 
 Now for real:
-
+```java
     public void removeFromBegin() {
         Node<T> node = head;		//(1. Store the current "head" of the list;)
         if (node != null) {			//(2. Checks if it's null, because if it's, there is nothing to be removed)
@@ -132,3 +136,4 @@ Now for real:
             length--;				//(5. Decrease the length of the list by one;)
         }
     }
+```
